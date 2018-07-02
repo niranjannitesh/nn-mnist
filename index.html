@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+	<title>mnist</title>
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="libraries/nnet.min.js"></script>
+	<script src="mnist.js"></script>
+	<script src="sketch.js"></script>
+
+	<style>
+		body {
+			margin:0;
+			padding:5%;
+			font-family: Rubik;
+			overflow: hidden;
+			color: #474747;
+			line-height: 1.5;
+		}
+		h3 {
+			margin-bottom: 25px;
+		}
+		canvas {
+			border: 1px solid #333;
+			margin:auto;
+		}
+		p {
+			font-size: 1.2rem;
+			width: 700px;
+			margin: 25px 0 0 0;
+		}
+
+	</style>
+</head>
+<body>
+	<h3>A Neural Network MNIST model written in javascript from scratch.</h3>
+	<p style="font-size: 1rem;">Draw your number : </p>
+	<div id="container"></div>
+	<div class="details">
+		<p id="info">
+			Guess from drawing input: <span id="guess">#</span> &nbsp;&nbsp;&nbsp;
+			Accuracy: <span id="percent"></span>
+		</p>
+		<p>
+			Learning Rate: <span id="lr"></span> <br>
+		</p>
+	</div>
+</body>
+</html>
