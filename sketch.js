@@ -128,6 +128,7 @@ function train(show) {
 
 function draw() {
 	if (mnist.traning_labels && mnist.testing_labels) {
+		select('#load').style('display', 'none');
 		let user = guessUserDigit();
 		// image(user, 0, 0);
 		background(0);
@@ -143,6 +144,8 @@ function draw() {
 		for (let i = 0; i < total2; i++) {
 			testing();
 		}
+	} else {
+		select('#load').html("Loading Dataset.....")
 	}
 	image(user_digit, 0, 0);
 
